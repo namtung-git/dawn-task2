@@ -1,0 +1,18 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Roboto Mono', 'Arial';
+}
+
+p {
+    color: grey;
+    font-size:  12px;
+}
+
+textarea {
+    font-family: 'Roboto Mono', 'Arial';
+}
+
+.title {
+    padding-left: 2rem;
+}
