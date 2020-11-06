@@ -12,7 +12,6 @@ class SubmitPanel extends React.Component {
       submitted: false,
     };
 
-    //Biding event handlers
     this.handleDelete = this.handleDelete.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -33,15 +32,14 @@ class SubmitPanel extends React.Component {
     e.preventDefault();
     if(this.state.questions.length === 0) {
       this.setState({ submitted: false });
+      return;
     }
     else {
       this.setState({ submitted: true });
+      this.props.onPanelSubmit(this.state.questions);
+      this.setState({ questions: [] });
     }
-    this.props.onPanelSubmit(this.state.questions);
-    this.setState({ questions: [] });
   }
-
-
 
   render() {
     return (
