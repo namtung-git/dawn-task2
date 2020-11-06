@@ -13,7 +13,7 @@ export default function DisplayPanel(props) {
 
   function handleClick(e) {
     e.preventDefault();
-    props.onChange(e, 1);
+    props.onChange(e, 1); //Switch to 'Submit a Question' tab, whose index is 1
   }
 
   return (
